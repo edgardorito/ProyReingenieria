@@ -3,10 +3,14 @@
 <head>
 	<title>Login</title>
 
+	<meta charset="utf-8">
+
 	  <!--Import Google Icon Font-->
       <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
       <!--Import materialize.css-->
       <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css"  media="screen,projection"/>
+
+      <link rel="stylesheet" type="text/css" href="css/estiloLogin.css"> 
 </head>
 <body>
 
@@ -14,47 +18,51 @@
       <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
       <script type="text/javascript" src="materialize/js/materialize.min.js"></script>
 
- 	  <div class="row">
-    <form class="col s12">
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
       <div class="row">
-        <div class="input-field col s6">
-          <input placeholder="Placeholder" id="first_name" type="text" class="validate">
-          <label for="first_name">First Name</label>
-        </div>
-        <div class="input-field col s6">
-          <input id="last_name" type="text" class="validate">
-          <label for="last_name">Last Name</label>
-        </div>
-      </div>
-      <div class="row">
-        <div class="input-field col s12">
-          <input disabled value="I am not editable" id="disabled" type="text" class="validate">
-          <label for="disabled">Disabled</label>
-        </div>
-      </div>
-      <div class="row">
-        <div class="input-field col s12">
-          <input id="password" type="password" class="validate">
-          <label for="password">Password</label>
-        </div>
-      </div>
-      <div class="row">
-        <div class="input-field col s12">
-          <input id="email" type="email" class="validate">
-          <label for="email">Email</label>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col s12">
-          This is an inline input field:
-          <div class="input-field inline">
-            <input id="email" type="email" class="validate">
-            <label for="email" data-error="wrong" data-success="right">Email</label>
-          </div>
-        </div>
-      </div>
-    </form>
-  </div>
+      		<div class="col s4">
+      			<img src="imagenes/docente.png">
+      		</div>
+
+      		<div class="col s8">
+			    <form class="col s6 offset-s2 blue lighten-5">
+
+
+				      <div class="row">
+				        <div class="input-field col s8 offset-s2">
+				          <input id="first_name" type="text" class="validate">
+				          <label for="first_name">Usuario</label>
+				        </div>
+				      </div>
+				      
+				      <div class="row">
+				        <div class="input-field col s8 offset-s2">
+				          <input id="password" type="password" class="validate">
+				          <label for="password">Password</label>
+				        </div>
+				      </div>
+
+				      <div class="row">
+					      <div class="input-field col s6 offset-s4">
+						      <button class="btn waves-effect waves-light" type="submit" name="action">ingresar
+							    <i class="material-icons right">send</i>
+							  </button>
+						  </div>
+					  </div>
+
+			    </form>
+			</div>
+  	   </div>
+
+
 
 </body>
 </html>
