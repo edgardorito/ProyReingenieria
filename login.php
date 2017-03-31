@@ -2,29 +2,33 @@
    include("conexion.php");
    session_start();
    
-   if($_SERVER["REQUEST_METHOD"] == "POST") {
-      // username and password sent from form 
+   if(!isset($_SESSION['usuario']))
+   {
+    if(isset($_POST['login']))
+    {
+        $myusername = "edgardo";//$_POST['username'];
+      $mypassword = "edo";// $_POST['password']; 
       
-      $myusername = mysqli_real_escape_string($db,$_POST['username']);
-      $mypassword = mysqli_real_escape_string($db,$_POST['password']); 
-      
-      $sql = "SELECT id FROM usuarios WHERE nombre = '$myusername' and contrasena = '$mypassword'";
-      $result = mysqli_query($db,$sql);
-      $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
-      $active = $row['active'];
-      
-      $count = mysqli_num_rows($result);
-      
+      $consulta=  mysql_query("select id FROM usuarios WHERE nombre = '$myusername' and contrasena = '$mypassword'") or die("Fallo la conexion");
+      $n_Filas=  mysql_num_rows($consulta);
+
+      $row = mysql_fetch_array($consulta);
+
+   
       // If result matched $myusername and $mypassword, table row must be 1 row
     
-      if($count == 1) {
-         session_register("myusername");
-         $_SESSION['login_user'] = $myusername;
-         
-         header("location: welcome.php");
-      }else {
-         $error = "Your Login Name or Password is invalid";
+      if($n_Filas == 1) {
+   
+         $_SESSION['usuario'] = $myusername;
+         $_SESSION['id'] = $row["id"];
+         header("location: index.php");
+      }       
+          else
+          {
+              echo '<div class="error">Su usuario es incorrecto, intente nuevamente.</div>';
+          }
       }
+
    }
 ?>
 <!DOCTYPE html>
@@ -84,6 +88,7 @@
       </div>
     </form>
   </div>
+
 
 </body>
 </html>
