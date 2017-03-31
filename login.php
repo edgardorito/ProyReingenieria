@@ -1,3 +1,36 @@
+<?php
+   include("conexion.php");
+   session_start();
+   
+   if(!isset($_SESSION['usuario']))
+   {
+    if(isset($_POST['login']))
+    {
+        $myusername = "edgardo";//$_POST['username'];
+      $mypassword = "edo";// $_POST['password']; 
+      
+      $consulta=  mysql_query("select id FROM usuarios WHERE nombre = '$myusername' and contrasena = '$mypassword'") or die("Fallo la conexion");
+      $n_Filas=  mysql_num_rows($consulta);
+
+      $row = mysql_fetch_array($consulta);
+
+   
+      // If result matched $myusername and $mypassword, table row must be 1 row
+    
+      if($n_Filas == 1) {
+   
+         $_SESSION['usuario'] = $myusername;
+         $_SESSION['id'] = $row["id"];
+         header("location: index.php");
+      }       
+          else
+          {
+              echo '<div class="error">Su usuario es incorrecto, intente nuevamente.</div>';
+          }
+      }
+
+   }
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -61,6 +94,7 @@
 			    </form>
 			</div>
   	   </div>
+
 
 
 
