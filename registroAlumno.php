@@ -3,7 +3,7 @@
 <head>
 	<title>Registrar usuario</title>
 	<meta charset="UTF-8">
-	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+	 <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script type="text/javascript" src="materialize/js/materialize.min.js"></script>
     <script type="text/javascript" src="js/registro.js"></script>
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -11,20 +11,15 @@
     <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css"  media="screen,projection"/>
 </head>
 <body>
-
-	 <main>
+<nav>
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo">Bienvenido Alumno</a>
+    </div>
+  </nav>
+	 <main><br><br>
     <div class="row">
-    	<center>
-        <form  id="forma" class="col s12" action="" method="post">
+        <form  id="forma" class="col s12" action="registrarAlumnoBD.php" method="post">
           <div class="row"><br>
-          	<h5>Registrarse</h5><br>
-          	<div>
-		      <input name="group1" type="radio" id="alumno" />
-		      <label for="alumno">Alumno</label>
-		      <input name="group1" type="radio" id="ptc" />
-		      <label for="ptc">PTC</label>
-		    </div><br>
-		</center>
           <div class="input-field col s12 m12 l6">
               <i class="material-icons prefix">account_box</i>
               <input required id="nombre" type="text" class="validate" name="nombre">
@@ -42,7 +37,7 @@
             </div>
             <div class="input-field col s12 m12 l6">
               <i class="material-icons prefix">book</i>
-              <input required id="matricula" type="text" class="validate" name="matricula">
+              <input required id="matricula" type="number" class="validate" name="matricula">
               <label class="active" for="matricula">Matricula</label>
             </div>
             <div class="input-field col s12 m12 l6">
@@ -52,10 +47,10 @@
             </div>
             <div class="input-field col s12 m12 l6">
               <i class="material-icons prefix">collections_bookmark</i>
-              <input id="cuatrimestre" type="text" class="validate" name="cuatrimestre">
+              <input required id="cuatrimestre" type="number" class="validate" name="cuatrimestre">
               <label class="active" for="cuatrimestre">Cuatrimestre</label>
             </div>
-          </div>
+          </div><br><br>
           <center>
             <button class="btn waves-effect waves-light" >Aceptar
                 <i class="material-icons right">send</i>
