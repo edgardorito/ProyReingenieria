@@ -66,7 +66,7 @@
       		</div>
 
       		<div class="col s8">
-			    <form class="col s6 offset-s2 blue lighten-5">
+			    <form class="col s6 offset-s2 #fafafa grey lighten-5">
 
 
 				      <div class="row">
@@ -92,6 +92,23 @@
 					  </div>
 
 			    </form>
+
+			    <div class="">
+			    	 <div class="col s5">
+					      <div class="input-field col s6 offset-s4">
+						      <button class="btn waves-effect waves-light #4fc3f7 light-blue lighten-2" type="" name="action">Registrar_Alumno
+							  </button>
+						  </div>
+					  </div>
+
+					  <div class="col s1">
+					      <div class="input-field col s6 offset-s4">
+						      <button class="btn waves-effect waves-light #4fc3f7 light-blue lighten-2" type="" name="action">Registrar_PTC
+							  </button>
+						  </div>
+					  </div>
+				</div>
+
 			</div>
   	   </div>
 
