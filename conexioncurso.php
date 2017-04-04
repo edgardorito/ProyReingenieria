@@ -1,10 +1,10 @@
 <?php
  
 //Configuracion de la conexion a base de datos
-$servername = "localhost";
-$username = "root";
-$password = "root";
-$dbname = "rein";
+$servername = "ERIDE";
+$username = "jeje";
+$password = "uno";
+$dbname = "proyreing";
 
 $mat=$_POST['materia'];
   $cua=$_POST['cuatri'];
@@ -27,7 +27,7 @@ if ($conn->connect_error) {
 
 if ($conn->query($sql) === TRUE) {
     echo "<script> alert('Registro exitoso'); </script>";
-    header('Location: login.php');
+    header('Location: index.php');
 } else {
   echo "<script> alert('Registro fallido'); </script>";
   header('Location: Cursos.php');

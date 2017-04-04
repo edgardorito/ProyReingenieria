@@ -17,7 +17,7 @@
 <body>
 	<nav>
 	    <div class="nav-wrapper">
-	      <a href="#" class="brand-logo">Inicio</a>
+	      <a href="#" class="brand-logo">Horario</a>
 	      <ul id="nav-mobile" class="right  hide-on-med-and-down">
 	      	<?php
 	      		if($_SESSION['tipo'] != "alumno"){
@@ -29,11 +29,11 @@
 	      </ul>
 	    </div>
 	  </nav>
-	<main>
-		<div>
-			<h1>Bienvenido  <?php echo " ".$_SESSION['usuario'].""  ?></h1>
-		</div>
 
+	<main>
+		<?php 
+			include('listarHorario.php');
+		?>
 	</main>
 </body>
 </html>

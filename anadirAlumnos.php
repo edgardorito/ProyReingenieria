@@ -17,23 +17,15 @@
 <body>
 	<nav>
 	    <div class="nav-wrapper">
-	      <a href="#" class="brand-logo">Inicio</a>
-	      <ul id="nav-mobile" class="right  hide-on-med-and-down">
-	      	<?php
-	      		if($_SESSION['tipo'] != "alumno"){
-	      			echo '<li><a href="Cursos.php">Registrar Curso</a></li> ';
-	      		}
-	      	?>
-	        <li><a href="horario.php">Horario</a></li>
-	        <li><a href="cerrarSesion.php">Cerrar sesión</a></li>
-	      </ul>
+	      <a href="horario.php" class="brand-logo left">Volver</a>
 	    </div>
 	  </nav>
 	<main>
-		<div>
-			<h1>Bienvenido  <?php echo " ".$_SESSION['usuario'].""  ?></h1>
-		</div>
+		<?php
+			include('listarAlumnos.php');
+		?>
 
 	</main>
 </body>
 </html>
+

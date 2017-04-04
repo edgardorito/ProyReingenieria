@@ -1,9 +1,15 @@
+<?php
+  session_start();
+   if(!isset($_SESSION['usuario'])){
+    header('Location: login.php' );
+   }
+?>
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Cursos</title>
+  <title>Cursos</title>
 
-	  <!--Import Google Icon Font-->
+    <!--Import Google Icon Font-->
       <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
       <!--Import materialize.css-->
       <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css"  media="screen,projection"/>
@@ -20,8 +26,8 @@
       <script type="text/javascript" src="materialize/js/materialize.min.js"></script>
      
 
- 	  <div class="row">
-    <form class="col s12" action="conexioncurso.php" method="post" >
+    <div class="row">
+    <form class="col s12" action="conexioncurso.php" method="POST" >
       <div class="row">
         <div class="input-field col s12">
           <input type="text" class="validate" name="materia">
@@ -39,22 +45,20 @@
           <input type="text" class="validate" name="horario">
           <label>Horario</label>
         </div>
-        <?php
-          //session_start(); '. $_SESSION['id'].'
-          echo ' <div class="input-field col s12" style="display:none"><input type="text" value="125242" class="validate" name="id"> </div>';
-        ?>
-       
-        
+        <?php    
           
+          echo ' <div class="input-field col s12" style="display:none"><input type="text" value="'. $_SESSION['id'].'" class="validate" name="id"> </div>';
+        ?>        
        
       </div>
-      <div class="waves-effect waves-light btn col s12">
+      <div class="col s12">
       
-      <input type="submit" name="Enviar" id="enviar-btn"">
-      
+      <!--<input type="submit" name="Enviar" id="enviar-btn"">  -->
+       <button class="btn waves-effect waves-light" type="submit" name="action">Enviar
+                  <i class="material-icons right">send</i>
+                </button>
         
-      </div>
-      
+      </div>  
        
     
     </form>

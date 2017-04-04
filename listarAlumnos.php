@@ -7,7 +7,7 @@
 <?php 
 	include 'conexion.php';
 
-	$consulta=  mysql_query("select * from usuarios") or die("Fallo la conexion");
+	$consulta=  mysql_query("select * from usuarios where tipo = 'alumno' and cuatrimestre = '".$_GET['cuatrimestre'] ."'") or die("Fallo la conexion");
 	$n_Filas=  mysql_num_rows($consulta);
 
 	if($n_Filas > 0){
@@ -20,7 +20,6 @@
 			print($info["matricula"]);
 			print($info["cuatrimestre"]);
 			print($info["email"]);
-			print($info["tipo"]);
 			print($info["contrasena"]);
 
 		}

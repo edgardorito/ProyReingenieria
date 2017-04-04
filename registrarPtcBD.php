@@ -1,6 +1,6 @@
 
 <?php
-$servername = "localhost";
+$servername = "ERIDE";
 $username = "jeje";
 $password = "uno";
 $dbname = "proyreing";
@@ -10,7 +10,7 @@ $contrasena= $_POST['contrasena'];
 $matricula= $_POST['matricula'];
 $cuatrimestre= $_POST['cuatrimestre'];
 $email= $_POST['email'];
-$tipo= $_POST['tipo'];
+
 
 
 // Create connection
@@ -20,7 +20,7 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 } 
 
-$sql = "INSERT INTO registroalumno (nombre,apellido,matricula,email,tipo,contrasena) values ('$nombre','$apellido','$matricula','$email','ptc', '$contrasena')";
+$sql = "INSERT INTO usuarios (nombre,apellido,matricula,email,tipo,contrasena) values ('$nombre','$apellido','$matricula','$email','ptc', '$contrasena')";
 
 if ($conn->query($sql) === TRUE) {
     echo "<script> alert('Registro exitoso'); </script>";
