@@ -4,7 +4,8 @@ CREATE TABLE `proyreing`.`usuarios` (
   `apellido` VARCHAR(50) NOT NULL,
   `matricula` VARCHAR(20) NOT NULL,
   `cuatrimestre` VARCHAR(10) NULL,
-  `email` VARCHAR(15) NOT NULL,
+  `email` VARCHAR(150) NOT NULL,
+  `tipo` VARCHAR(100) NOT NULL,
   `contrasena` VARCHAR(100) NOT NULL,
   PRIMARY KEY (`id`));
 
