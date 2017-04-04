@@ -25,7 +25,7 @@
 		    	if(this.responseText== "sucess"){
 		    		alert("se ha guardado alumno")
 		    	}else{
-		    		alert("no se pudo guardar")
+		    		alert("no se pudo guardar: "+this.responseTex)
 		    	}
 		     document.getElementById("demo").innerHTML = this.responseText;
 		    }
