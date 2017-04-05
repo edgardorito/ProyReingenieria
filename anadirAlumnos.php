@@ -21,17 +21,20 @@
 	
 		  var xhttp = new XMLHttpRequest();
 		  xhttp.onreadystatechange = function() {
-		    if (this.readyState == 4 && this.status == 200) {
-		    	if(this.responseText== "sucess"){
+		  	if (xhttp.readyState == XMLHttpRequest.DONE) {
+		  		var aux = xhttp.responseText;
+		  		var b = "sucess";
+		        console.log(aux);
+		        if(aux.localeCompare(b)){
 		    		alert("se ha guardado alumno")
 		    	}else{
-		    		alert("no se pudo guardar: "+this.responseTex)
+		    		alert("no se pudo guardar")
 		    	}
-		     document.getElementById("demo").innerHTML = this.responseText;
 		    }
+		    
 		  };
 		  xhttp.open("GET", "addAlumnoBD.php?idM="+idM+"&idA="+idA+"&nombre="+nombre+"&apellido="+apellido+"&matricula="+matricula, true);
-		  xhttp.send();
+		  xhttp.send(null);
 
 	}
 	</script>

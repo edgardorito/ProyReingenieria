@@ -26,9 +26,8 @@
 			         ".$info['matricula']."<br>
 			         ".$info['cuatrimestre']."<br>
 			      </p>
-				  <button onclick='addAlumno(\"".$idM."\",\"".$i."\",\"".$info['nombre']."\",\"".$info['apellido']."\",\"".$info['matricula']."\")' class='secondary-content btn waves-effect waves-light' type='submit' name='action'>Submit
-				    <i class='material-icons right'>Agregar</i>
-				  </button>
+					  <button onclick='addAlumno(\"".$idM."\",\"".$info['id']."\",\"".$info['nombre']."\",\"".$info['apellido']."\",\"".$info['matricula']."\")' class='secondary-content btn waves-effect waves-light' type='submit' >Agregar
+					  </button>
 			    </li>
 			  </ul>";
 

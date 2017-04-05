@@ -18,4 +18,13 @@ CREATE TABLE IF NOT EXISTS `proyreing`.`cursos` (
   `grupo` VARCHAR(45) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE INDEX `id_UNIQUE` (`id` ASC))
-ENGINE = InnoDB
+
+
+CREATE TABLE `proyreing`.`alumnocursos` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `idmateria` INT NOT NULL,
+  `idalumno` INT NOT NULL,
+  `nombre` VARCHAR(45) NOT NULL,
+  `apellido` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE INDEX `id_UNIQUE` (`id` ASC));
